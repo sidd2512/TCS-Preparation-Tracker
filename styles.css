@@ -88,6 +88,18 @@ li:hover {
   transform: translateY(-2px);
 }
 
+/* Ensure links in topic list do not appear blue or underlined */
+.section ul li a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section ul li a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
 /* Status Dropdown */
 select {
   padding: 6px 10px;
