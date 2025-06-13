@@ -43,6 +43,12 @@ const quantitativeVideoLinks = {
     // Add more if needed
 };
 
+// Helper to convert playlist links to normal video links
+function getNormalYouTubeLink(url) {
+    const match = url.match(/v=([\w-]+)/);
+    return match ? `https://www.youtube.com/watch?v=${match[1]}` : url;
+}
+
 // Load saved progress from localStorage
 function loadProgress() {
     const savedProgress = localStorage.getItem("tcsNqtProgress");
@@ -82,7 +88,7 @@ function initTracker() {
             li.textContent = "";
             if (section === "quantitative" && quantitativeVideoLinks[topic]) {
                 const a = document.createElement("a");
-                a.href = quantitativeVideoLinks[topic];
+                a.href = getNormalYouTubeLink(quantitativeVideoLinks[topic]);
                 a.textContent = topic;
                 a.target = "_blank";
                 a.rel = "noopener noreferrer";
