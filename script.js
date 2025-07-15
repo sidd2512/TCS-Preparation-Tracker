@@ -87,6 +87,28 @@ function saveProgress(progress) {
 }
 
 // Initialize the tracker
+function updateSectionProgress(section) {
+    const progress = loadProgress();
+    const total = topics[section].length;
+    let completed = 0;
+    topics[section].forEach(topic => {
+        if (progress[topic] === "done") {
+            completed += 1;
+        } else if (progress[topic] === "in-progress") {
+            completed += 0.5;
+        }
+    });
+    const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
+    const bar = document.getElementById(`${section}-progress-bar`);
+    const percentText = document.getElementById(`${section}-progress-percent`);
+    if (bar) bar.style.width = percent + "%";
+    if (percentText) percentText.textContent = percent + "%";
+}
+
+function updateAllProgressBars() {
+    Object.keys(topics).forEach(section => updateSectionProgress(section));
+}
+
 function initTracker() {
     const progress = loadProgress();
     // Render each section
@@ -109,6 +131,7 @@ function initTracker() {
                 progress[topic] = e.target.value;
                 saveProgress(progress);
                 updateTopicStyle(li, e.target.value);
+                updateSectionProgress(section);
             });
             // Render topic name (with link if available for Quantitative)
             li.textContent = "";
@@ -126,6 +149,7 @@ function initTracker() {
             updateTopicStyle(li, currentStatus);
             listElement.appendChild(li);
         });
+        updateSectionProgress(section);
     });
 }
 
@@ -144,4 +168,7 @@ document.getElementById("reset-btn").addEventListener("click", () => {
 });
 
 // Initialize on page load
-document.addEventListener("DOMContentLoaded", initTracker);
+document.addEventListener("DOMContentLoaded", () => {
+    initTracker();
+    updateAllProgressBars();
+});
