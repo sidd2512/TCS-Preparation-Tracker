@@ -1,24 +1,50 @@
 // Topics Data
 const topics = {
-    quantitative: [
-        "Number System", "Percentage", "Profit & Loss", "Ratio & Proportion",
-        "Simple & Compound Interest", "Time, Speed, Distance", "Time & Work",
-        "Averages", "Partnership", "Mixtures", "HCF & LCM", "Linear Equations",
-        "Statistics", "Progressions", "Logarithms", "Permutation & Combination",
-        "Probability", "Geometry & Mensuration", "Data Interpretation", "Puzzles"
-    ],
-    reasoning: [
-        "Logical Puzzles", "Seating Arrangements", "Data Arrangements",
-        "Spatial Reasoning", "Visual Reasoning", "Coding & Decoding",
-        "Blood Relations", "Syllogisms", "Venn Diagrams",
-        "Statement Assumption & Conclusion", "Analogies", "Cubes & 3D Shapes",
-        "Attention to Detail"
-    ],
-    verbal: [
-        "Reading Comprehension", "Sentence Correction", "Error Identification",
-        "Fill in the Blanks", "Synonyms & Antonyms", "Sentence Rearrangement",
-        "Paragraph Rearrangement", "Sentence Completion"
-    ]
+  quantitative: [
+    "Simplification & BODMAS",
+    "Number System Found",
+    "Percentage",
+    "Simple and Compound Interest + Instalment",
+    "Profit Loss & Discount",
+    "Time and Work + Pipes and Cistern",
+    "Ratio & Proportion",
+    "Ages and Partnership",
+    "Alligation & Mixtures",
+    "Average",
+    "Data Interpretation and Set Theory (Venn Diagram)",
+    "Permutation & Combination + Probability",
+    "TSD + Boats and Stream",
+    "Mensuration (3D+2D)",
+    "Statistics",
+    "Quadratic Equations",
+    "Number System Advan",
+    "E-books & Mock Test"
+  ],
+  reasoning: [
+    "Coding – Decoding + Alphabets related coding + Chinese coding",
+    "Distance and Direction",
+    "Blood Relation",
+    "Linear and Parallel Arrangements + New types",
+    "Circular Arrangements (All Types-Direction)",
+    "Miscellaneous Arrangements (Floor/Square/Rectangle/Triangle)",
+    "Critical Reasoning (Arguments & Assumptions, Agree/Disagree)",
+    "Critical Reasoning - Syllogism",
+    "Number Series (All types)",
+    "Puzzles (Height comparison + Miss Type Other)",
+    "Data Sufficiency",
+    "Non-Verbal Reasoning (Water Image/Mirror Image/Paper folding/Next Pattern)",
+    "Miscellaneous Reasoning (Clocks/Calendar/Ranking/Eligibility)",
+    "E-books & Mock Test"
+  ],
+  verbal: [
+    "Reading Comprehension (R.C.)",
+    "Fill in the blanks / Cloze Test",
+    "Para Jumbles (TITA)",
+    "Informal to Formal",
+    "Spot the Error (Vocabulary & Grammar based) - SVA, Articles, Prepositions, Tenses",
+    "Synonyms & Antonyms",
+    "E-books & Mock Test"
+  ]
 };
 
 // Video links for Quantitative topics
